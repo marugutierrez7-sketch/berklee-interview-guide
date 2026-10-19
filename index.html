@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berklee College of Music – Complete Student Interview Guide</title>
+<style>
+  :root {
+    --berklee-red: #c8102e;
+    --berklee-dark: #1a1a1a;
+    --berklee-gray: #2d2d2d;
+    --accent: #f5a623;
+    --success: #28a745;
+    --light-bg: #f8f9fa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    background: var(--berklee-red);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { opacity: 0.95; font-size: 1.05rem; }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  h2 {
+    color: var(--berklee-red);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+    font-size: 1.45rem;
+  }
+  h3 { color: var(--berklee-dark); margin: 20px 0 12px; font-size: 1.2rem; }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center;
+  }
+  .nav button {
+    background: var(--berklee-gray);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+  .nav button:hover, .nav button.active {
+    background: var(--berklee-red);
+    transform: translateY(-2px);
+  }
+  .section { display: none; }
+  .section.active { display: block; }
+  .question-box {
+    background: var(--light-bg);
+    border-left: 5px solid var(--berklee-red);
+    padding: 18px;
+    margin: 16px 0;
+    border-radius: 0 12px 12px 0;
+  }
+  .model-answer {
+    background: #e8f5e9;
+    border-left: 5px solid var(--success);
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 0 12px 12px 0;
+  }
+  .tip {
+    background: #fff8e1;
+    border-left: 5px solid var(--accent);
+    padding: 14px;
+    margin: 14px 0;
+    border-radius: 0 10px 10px 0;
+  }
+  .speak-btn {
+    background: var(--berklee-red);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 6px 4px 6px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .speak-btn:hover { background: #a00d24; }
+  .mcq {
+    background: #f0f4f8;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+  .mcq label {
+    display: block;
+    padding: 10px 14px;
+    margin: 6px 0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .mcq label:hover { border-color: var(--berklee-red); }
+  .mcq input { margin-right: 10px; }
+  .correct { border-color: var(--success) !important; background: #e8f5e9 !important; }
+  .wrong { border-color: #dc3545 !important; background: #fce8e8 !important; }
+  .check-btn, .reset-btn {
+    background: var(--berklee-dark);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 8px;
+  }
+  .check-btn:hover { background: var(--berklee-red); }
+  .structure-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+  .structure-table th, .structure-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  .structure-table th {
+    background: var(--berklee-red);
+    color: white;
+  }
+  .structure-table tr:nth-child(even) { background: #f9f9f9; }
+  .verb-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+  }
+  .verb {
+    background: #e3f2fd;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  .audio-practice {
+    background: #e8eaf6;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 16px 0;
+  }
+  footer {
+    text-align: center;
+    color: #aaa;
+    padding: 30px 10px;
+    font-size: 0.9rem;
+  }
+  .score {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--berklee-red);
+    margin: 15px 0;
+  }
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.4rem; }
+    .card { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Berklee College of Music</h1>
+  <p>Complete Student Interview Guide – Excel with Confidence</p>
+  <p style="font-size:0.95rem;margin-top:8px;">Interactive • Audio Practice • Multiple Choice • English Support</p>
+</header>
+
+<div class="container">
+  <div class="nav">
+    <button class="active" onclick="showSection('overview')">Overview</button>
+    <button onclick="showSection('questions')">Typical Questions</button>
+    <button onclick="showSection('structures')">Sentence Structures</button>
+    <button onclick="showSection('mcq')">Multiple Choice</button>
+    <button onclick="showSection('audio')">Audio Practice</button>
+    <button onclick="showSection('comprehension')">Comprehension</button>
+    <button onclick="showSection('tips')">Final Tips</button>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div id="overview" class="section active">
+    <div class="card">
+      <h2>What to Expect</h2>
+      <p>Every Berklee undergraduate applicant completes an <strong>interview</strong> (≈15 minutes). For Bachelor of Music and BA in Black Music & Culture it is a live conversation (in-person or Zoom). For BA in Music Industry Leadership & Innovation it is recorded via Kira Talent.</p>
+      <div class="tip">
+        <strong>Official focus areas (from Berklee Admissions):</strong>
+        <ol style="margin:10px 0 0 20px;">
+          <li>What motivates you to pursue a career in music? Who are you as an artist? What excites you about the industry?</li>
+          <li>Community & belonging: What does community mean to you? Why is a safe/welcoming environment important? What can Berklee learn from you?</li>
+          <li>Why Berklee? Which programs/activities align with your career goals?</li>
+        </ol>
+      </div>
+      <p>All interviews are conducted in English. Language skills are assessed if English is not your first language. Authenticity, clear goals, and specific knowledge of Berklee matter more than perfect grammar.</p>
+      <p style="margin-top:12px;"><strong>Duration:</strong> ≈15 minutes after your audition (or standalone for BA Industry). Be ready 30 minutes early for online sessions.</p>
+    </div>
+  </div>
+
+  <!-- TYPICAL QUESTIONS -->
+  <div id="questions" class="section">
+    <div class="card">
+      <h2>Typical Interview Questions + Best Ways to Answer</h2>
+
+      <div class="question-box">
+        <strong>1. What motivates you to pursue a career in music / performing arts?</strong>
+        <button class="speak-btn" onclick="speak(this.previousElementSibling.textContent)">🔊 Listen</button>
+        <div class="model-answer">
+          <strong>Strong answer structure:</strong><br>
+          “I am motivated by the power of music to connect people and tell stories. Growing up in [your city/country], I discovered that composing/performing allowed me to express emotions I couldn’t put into words. What drives me is the desire to create music that moves audiences and to keep growing as an artist every day.”
+          <br><br><em>Tip:</em> Be personal and specific. Mention a real moment or influence.
+        </div>
+      </div>
+
+      <div class="question-box">
+        <strong>2. Who are you as an artist?</strong>
+        <button class="speak-btn" onclick="speak('Who are you as an artist?')">🔊 Listen</button>
+        <div class="model-answer">
+          “As an artist I am a [your primary identity – e.g., songwriter who blends Latin rhythms with jazz harmony / guitarist focused on improvisation and original composition]. My style combines [2–3 concrete elements]. I value authenticity, collaboration, and continuous learning.”
+        </div>
+      </div>
+
+      <div class="question-box">
+        <strong>3. What excites you about the music industry?</strong>
+        <button class="speak-btn" onclick="speak('What excites you about the music industry?')">🔊 Listen</button>
+        <div class="model-answer">
+          “I am excited by how technology and global collaboration are changing the way music is created and shared. The opportunity to work with artists from different cultures and to reach audiences worldwide motivates me to keep improving my craft and understanding of the business side.”
+        </div>
+      </div>
+
+      <div class="question-box">
+        <strong>4. What does community mean to you?</strong>
+        <button class="speak-btn" onclick="speak('What does community mean to you?')">🔊 Listen</button>
+        <div class="model-answer">
+          “Community means a group of people who support each other’s growth, share knowledge, and create a safe space where everyone can be themselves. In music, community is essential because we grow faster when we play, write, and learn together.”
+        </div>
+      </div>
+
+      <div class="question-box">
+        <strong>5. Why is a safe and welcoming environment important to you?</strong>
+        <button class="speak-btn" onclick="speak('Why is a safe and welcoming environment important to you?')">🔊 Listen</button>
+        <div class="model-answer">
+          “Creativity needs safety. When people feel respected and included, they take artistic risks and share honest ideas. A welcoming environment allows every voice to contribute, which makes the music and the learning richer for everyone.”
+        </div>
+      </div>
+
+      <div class="question-box">
+        <strong>6. What can the Berklee community learn from you?</strong>
+        <button class="speak-btn" onclick="speak('What can the Berklee community learn from you?')">🔊 Listen</button>
+        <div class="model-answer">
+          “I can share my experience with [your cultural background / unique musical tradition / perspective on collaboration or mental health in music]. I bring a strong work ethic, openness to feedback, and a desire to help other students grow through collaboration and mutual support.”
+        </div>
+      </div>
+
+      <div class="question-box">
+        <strong>7. Why Berklee? What about Berklee’s programs speak to your career goals?</strong>
+        <button class="speak-btn" onclick="speak('Why Berklee? What about Berklee’s programs speak to your career goals?')">🔊 Listen</button>
+        <div class="model-answer">
+          “Berklee is the place where I can combine high-level performance training with real-world music business and technology skills. I am especially interested in [specific major or courses, e.g., Contemporary Writing & Production / Music Production & Engineering / Professional Music]. The opportunity to study with faculty who are active professionals and to collaborate with students from all over the world matches exactly the career path I want: becoming a versatile artist and creator who can work across styles and platforms.”
+          <br><br><em>Pro tip:</em> Mention 1–2 specific programs, ensembles, or facilities. Show you researched the school.
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>Extra common questions:</strong><br>
+        • How have you prepared for Berklee?<br>
+        • What are your professional / career goals after graduation?<br>
+        • Tell me about a challenge you overcame in your musical journey.<br>
+        • Which musicians or styles influence you most?
+      </div>
+    </div>
+  </div>
+
+  <!-- SENTENCE STRUCTURES -->
+  <div id="structures" class="section">
+    <div class="card">
+      <h2>English Support – Useful Verbs & Sentence Structures</h2>
+      <p>Use these patterns to speak clearly and confidently. Practice them out loud.</p>
+
+      <h3>Powerful Verbs for Interviews</h3>
+      <div class="verb-list">
+        <span class="verb">motivate</span>
+        <span class="verb">inspire</span>
+        <span class="verb">drive</span>
+        <span class="verb">pursue</span>
+        <span class="verb">contribute</span>
+        <span class="verb">collaborate</span>
+        <span class="verb">grow</span>
+        <span class="verb">develop</span>
+        <span class="verb">express</span>
+        <span class="verb">connect</span>
+        <span class="verb">create</span>
+        <span class="verb">overcome</span>
+        <span class="verb">aspire</span>
+        <span class="verb">align</span>
+        <span class="verb">value</span>
+        <span class="verb">share</span>
+      </div>
+
+      <h3>Ready-to-Use Sentence Patterns</h3>
+      <table class="structure-table">
+        <tr><th>Pattern</th><th>Example</th></tr>
+        <tr><td>I am motivated by + noun/gerund</td><td>I am motivated by the desire to connect cultures through music.</td></tr>
+        <tr><td>What drives me is + clause</td><td>What drives me is the opportunity to keep learning and collaborating.</td></tr>
+        <tr><td>As an artist, I + verb</td><td>As an artist, I blend traditional rhythms with modern production.</td></tr>
+        <tr><td>Berklee offers + noun + that/which + clause</td><td>Berklee offers programs that combine performance and technology.</td></tr>
+        <tr><td>I can contribute + noun/gerund</td><td>I can contribute my experience with Latin American music and a collaborative spirit.</td></tr>
+        <tr><td>A safe environment is important because + clause</td><td>A safe environment is important because it allows artists to take creative risks.</td></tr>
+        <tr><td>My goal is to + verb</td><td>My goal is to become a versatile producer and performer who works internationally.</td></tr>
+        <tr><td>I have prepared by + gerund</td><td>I have prepared by practicing improvisation daily and studying Berklee’s curriculum.</td></tr>
+      </table>
+
+      <div class="tip">
+        <strong>Practice tip:</strong> Write 3 full answers using these patterns, then record yourself speaking them. Listen and improve fluency and pronunciation.
+      </div>
+    </div>
+  </div>
+
+  <!-- MULTIPLE CHOICE -->
+  <div id="mcq" class="section">
+    <div class="card">
+      <h2>Multiple-Choice Practice Quiz</h2>
+      <p>Test your knowledge of the interview. Choose the best answer, then check your score.</p>
+
+      <div class="mcq" data-correct="b">
+        <strong>1. What is the main purpose of the Berklee interview?</strong>
+        <label><input type="radio" name="q1" value="a"> To test your music theory knowledge</label>
+        <label><input type="radio" name="q1" value="b"> To understand who you are as an artist, your goals, and why Berklee fits you</label>
+        <label><input type="radio" name="q1" value="c"> To decide your major</label>
+        <label><input type="radio" name="q1" value="d"> To check your English grammar only</label>
+      </div>
+
+      <div class="mcq" data-correct="c">
+        <strong>2. Which of these is an official focus area of the interview?</strong>
+        <label><input type="radio" name="q2" value="a"> Your SAT/ACT scores</label>
+        <label><input type="radio" name="q2" value="b"> Your favorite sports team</label>
+        <label><input type="radio" name="q2" value="c"> What community means to you and what you can bring to Berklee</label>
+        <label><input type="radio" name="q2" value="d"> How many instruments you own</label>
+      </div>
+
+      <div class="mcq" data-correct="a">
+        <strong>3. Best way to answer “Why Berklee?”</strong>
+        <label><input type="radio" name="q3" value="a"> Mention specific programs, faculty, or opportunities that match your career goals</label>
+        <label><input type="radio" name="q3" value="b"> Say “Because it is the most famous music school”</label>
+        <label><input type="radio" name="q3" value="c"> Talk only about the location in Boston</label>
+        <label><input type="radio" name="q3" value="d"> Say you have no other options</label>
+      </div>
+
+      <div class="mcq" data-correct="b">
+        <strong>4. How long is a typical live interview?</strong>
+        <label><input type="radio" name="q4" value="a"> 5 minutes</label>
+        <label><input type="radio" name="q4" value="b"> About 15 minutes</label>
+        <label><input type="radio" name="q4" value="c"> 1 hour</label>
+        <label><input type="radio" name="q4" value="d"> 3 hours</label>
+      </div>
+
+      <div class="mcq" data-correct="c">
+        <strong>5. What should you do if English is not your first language?</strong>
+        <label><input type="radio" name="q5" value="a"> Speak very fast to show fluency</label>
+        <label><input type="radio" name="q5" value="b"> Avoid the interview</label>
+        <label><input type="radio" name="q5" value="c"> Speak clearly, use simple strong sentences, and focus on content and authenticity</label>
+        <label><input type="radio" name="q5" value="d"> Answer only in your native language</label>
+      </div>
+
+      <div class="mcq" data-correct="a">
+        <strong>6. When answering “What can Berklee learn from you?”, the best approach is:</strong>
+        <label><input type="radio" name="q6" value="a"> Share a unique perspective, cultural background, or personal strength you can offer</label>
+        <label><input type="radio" name="q6" value="b"> Say you have nothing special to offer</label>
+        <label><input type="radio" name="q6" value="c"> Talk only about your technical skills</label>
+        <label><input type="radio" name="q6" value="d"> Criticize other students</label>
+      </div>
+
+      <button class="check-btn" onclick="checkQuiz()">Check Answers</button>
+      <button class="reset-btn" onclick="resetQuiz()">Reset</button>
+      <div id="quizScore" class="score"></div>
+    </div>
+  </div>
+
+  <!-- AUDIO PRACTICE -->
+  <div id="audio" class="section">
+    <div class="card">
+      <h2>Audio Practice – Speak the Questions</h2>
+      <p>Click the buttons to hear each question spoken clearly. Then practice answering out loud. Uses the browser’s speech synthesis (works offline after loading).</p>
+
+      <div class="audio-practice">
+        <p><strong>Question 1</strong></p>
+        <button class="speak-btn" onclick="speak('What motivates you to pursue a career in music or the performing arts?')">🔊 Play Question</button>
+        <button class="speak-btn" onclick="speak('I am motivated by the power of music to connect people and express emotions that words cannot. Growing up, music became my way of telling stories and building community.')">🔊 Example Answer</button>
+      </div>
+
+      <div class="audio-practice">
+        <p><strong>Question 2</strong></p>
+        <button class="speak-btn" onclick="speak('Who are you as an artist?')">🔊 Play Question</button>
+        <button class="speak-btn" onclick="speak('As an artist I am a songwriter and multi-instrumentalist who blends Latin rhythms with contemporary harmony. I value authenticity, collaboration, and continuous growth.')">🔊 Example Answer</button>
+      </div>
+
+      <div class="audio-practice">
+        <p><strong>Question 3</strong></p>
+        <button class="speak-btn" onclick="speak('What does community mean to you, and why is a safe and welcoming environment important?')">🔊 Play Question</button>
+        <button class="speak-btn" onclick="speak('Community means mutual support and shared growth. A safe environment is essential because creativity flourishes when people feel respected and free to take artistic risks.')">🔊 Example Answer</button>
+      </div>
+
+      <div class="audio-practice">
+        <p><strong>Question 4</strong></p>
+        <button class="speak-btn" onclick="speak('Why Berklee, and what about its programs speak to your career goals?')">🔊 Play Question</button>
+        <button class="speak-btn" onclick="speak('Berklee offers the perfect combination of high-level musicianship training and real-world industry skills. I am particularly interested in Contemporary Writing and Production because it will help me become a versatile creator who can write, produce, and perform across styles.')">🔊 Example Answer</button>
+      </div>
+
+      <div class="tip">
+        Practice tip: After listening, pause and answer in your own words for 30–60 seconds. Record yourself on your phone and listen back.
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPREHENSION -->
+  <div id="comprehension" class="section">
+    <div class="card">
+      <h2>Audio Comprehension Exercises</h2>
+      <p>Listen carefully, then answer the questions. These exercises train your ear for natural interview English.</p>
+
+      <div class="audio-practice">
+        <h3>Exercise 1</h3>
+        <button class="speak-btn" onclick="speak('During the interview we want to understand what motivates you as an artist, how you see community, and why Berklee is the right place for your goals. Be authentic, give specific examples, and show that you have researched our programs.')">🔊 Play Passage</button>
+        <div class="mcq" data-correct="b">
+          <strong>What are the three main things the interviewer wants to understand?</strong>
+          <label><input type="radio" name="c1" value="a"> Your favorite songs, your GPA, and your height</label>
+          <label><input type="radio" name="c1" value="b"> Your motivation as an artist, your view of community, and why Berklee fits your goals</label>
+          <label><input type="radio" name="c1" value="c"> Only your technical skills</label>
+        </div>
+      </div>
+
+      <div class="audio-practice">
+        <h3>Exercise 2</h3>
+        <button class="speak-btn" onclick="speak('A strong answer to Why Berklee includes specific programs or opportunities that match your career goals. For example, you might mention Contemporary Writing and Production, the global student community, or the chance to work with active professional faculty.')">🔊 Play Passage</button>
+        <div class="mcq" data-correct="a">
+          <strong>What makes a strong “Why Berklee” answer?</strong>
+          <label><input type="radio" name="c2" value="a"> Specific programs or opportunities that match your goals</label>
+          <label><input type="radio" name="c2" value="b"> Saying the school is famous</label>
+          <label><input type="radio" name="c2" value="c"> Talking only about Boston weather</label>
+        </div>
+      </div>
+
+      <div class="audio-practice">
+        <h3>Exercise 3</h3>
+        <button class="speak-btn" onclick="speak('If English is not your first language, speak clearly and at a natural pace. Focus on communicating your ideas with simple, strong sentences. Authenticity and content are more important than perfect grammar.')">🔊 Play Passage</button>
+        <div class="mcq" data-correct="c">
+          <strong>What should non-native speakers prioritize?</strong>
+          <label><input type="radio" name="c3" value="a"> Speaking as fast as possible</label>
+          <label><input type="radio" name="c3" value="b"> Using only complex vocabulary</label>
+          <label><input type="radio" name="c3" value="c"> Clear communication, simple strong sentences, authenticity and content</label>
+        </div>
+      </div>
+
+      <button class="check-btn" onclick="checkComprehension()">Check Comprehension Answers</button>
+      <div id="compScore" class="score"></div>
+    </div>
+  </div>
+
+  <!-- FINAL TIPS -->
+  <div id="tips" class="section">
+    <div class="card">
+      <h2>Final Tips to Excel</h2>
+      <ul style="margin-left:20px;line-height:1.9;">
+        <li><strong>Be authentic</strong> – Berklee values real stories over perfect answers.</li>
+        <li><strong>Research specific programs</strong> – Name 1–2 majors, courses, or ensembles that match your goals.</li>
+        <li><strong>Practice out loud</strong> – The more you speak your answers, the more natural they sound.</li>
+        <li><strong>Show community mindset</strong> – Talk about collaboration, support, and what you will contribute.</li>
+        <li><strong>Eye contact & energy</strong> – Smile, thank the interviewer, and stay present.</li>
+        <li><strong>For online interviews</strong> – Test camera, microphone, lighting, and internet in advance. Use a quiet room.</li>
+        <li><strong>Prepare 2–3 concrete examples</strong> from your musical journey (a performance, a challenge, a collaboration).</li>
+        <li><strong>End strong</strong> – You can ask a thoughtful question about student life or a specific program if time allows.</li>
+      </ul>
+      <div class="tip" style="margin-top:20px;">
+        <strong>Remember:</strong> The interview is a conversation. They already know you can play (from the audition). Now they want to know who you are and why Berklee is the right next step for you.
+      </div>
+      <p style="margin-top:20px;text-align:center;font-weight:600;color:var(--berklee-red);">You’ve got this. Go create your future at Berklee!</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Standalone interactive guide • Based on official Berklee Admissions guidelines<br>
+  Practice daily • Be yourself • Good luck!
+</footer>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function speak(text) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = 0.92;
+    u.pitch = 1;
+    window.speechSynthesis.speak(u);
+  } else {
+    alert('Speech synthesis not supported in this browser. Please use Chrome, Edge, or Safari.');
+  }
+}
+
+function checkQuiz() {
+  let score = 0;
+  const total = document.querySelectorAll('#mcq .mcq').length;
+  document.querySelectorAll('#mcq .mcq').forEach(q => {
+    const correct = q.dataset.correct;
+    const selected = q.querySelector('input:checked');
+    q.querySelectorAll('label').forEach(l => {
+      l.classList.remove('correct', 'wrong');
+    });
+    if (selected) {
+      const label = selected.parentElement;
+      if (selected.value === correct) {
+        label.classList.add('correct');
+        score++;
+      } else {
+        label.classList.add('wrong');
+        q.querySelector(`input[value="${correct}"]`).parentElement.classList.add('correct');
+      }
+    } else {
+      q.querySelector(`input[value="${correct}"]`).parentElement.classList.add('correct');
+    }
+  });
+  document.getElementById('quizScore').textContent = `Your score: ${score} / ${total}`;
+}
+
+function resetQuiz() {
+  document.querySelectorAll('#mcq input').forEach(i => i.checked = false);
+  document.querySelectorAll('#mcq label').forEach(l => l.classList.remove('correct', 'wrong'));
+  document.getElementById('quizScore').textContent = '';
+}
+
+function checkComprehension() {
+  let score = 0;
+  const total = document.querySelectorAll('#comprehension .mcq').length;
+  document.querySelectorAll('#comprehension .mcq').forEach(q => {
+    const correct = q.dataset.correct;
+    const selected = q.querySelector('input:checked');
+    q.querySelectorAll('label').forEach(l => l.classList.remove('correct', 'wrong'));
+    if (selected) {
+      const label = selected.parentElement;
+      if (selected.value === correct) {
+        label.classList.add('correct');
+        score++;
+      } else {
+        label.classList.add('wrong');
+        q.querySelector(`input[value="${correct}"]`).parentElement.classList.add('correct');
+      }
+    } else {
+      q.querySelector(`input[value="${correct}"]`).parentElement.classList.add('correct');
+    }
+  });
+  document.getElementById('compScore').textContent = `Your score: ${score} / ${total}`;
+}
+</script>
+</body>
+</html>
